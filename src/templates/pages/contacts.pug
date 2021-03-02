@@ -1,0 +1,33 @@
+extends ../template
+block title
+  | Глубинный вибратор
+block content
+  .contacts-outer
+    .contacts-tabs
+      .contacts-tabs__tab.contacts-tabs__tab_active Офис
+      .contacts-tabs__tab Производство
+    .contacts__map
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A37910e1475e790026b8cff03a65325ce878770bc3042e6a432fae9831cf0560e&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A001c65e6316e66c7ddec5ca22d42d79037a819e151ae231b96ed467b0f5ac67f&amp;source=constructor" width="100%" height="100%" frameborder="0" style="display: none;"></iframe>
+    section.container
+      .contacts
+        .contacts-info
+          h2.contacts-info__title Контакты
+          .contacts-info-wrap
+            .contacts-info-wrap-item
+              .contacts-info-wrap-item__name Телефон:
+              .contacts-info-wrap-item__value 8 (999) 238-04-97
+            .contacts-info-wrap-item
+              .contacts-info-wrap-item__name Электронная почта:
+              .contacts-info-wrap-item__value yarstroidk@gmail.com
+            .contacts-info-wrap-item
+              .contacts-info-wrap-item__name ИНН:
+              .contacts-info-wrap-item__value 7627031321
+            .contacts-info-wrap-item
+              .contacts-info-wrap-item__name ОГРН:
+              .contacts-info-wrap-item__value 1077627001980
+          .contacts-geo
+            .contacts-geo__name Расположение:
+            .contacts-geo__value Офис — Санкт-Петербург, пр-т. Энгельса, д. 50.
+            .contacts-geo__value Производство — Ярославская область, Ярославский район, д.Кузнечиха, ул. Индустриальная, 7 А.
+      

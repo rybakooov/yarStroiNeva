@@ -1,0 +1,110 @@
+.section-product {
+    margin-top: 160px;
+}
+
+.section-catalog__title {
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 135%;
+    color: #0D0D0D;
+    margin: 40px 0;
+}
+
+.product {
+    &-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -12px;
+        &-item {
+            display: flex;
+            flex-direction: column;
+            margin: 12px;
+            width: calc(100%/4 - 24px);
+            border: 1px solid #E9E9E9;
+            box-sizing: border-box;
+            transition: .3s;
+            overflow: hidden;
+            border-radius: 5px;
+            &:hover{
+              @media screen and (min-width: 1024px){
+                border-color: #0F304F;
+              }
+            }
+            &__img {
+                width: 100%;
+                display: block;
+            }
+            &__name {
+                margin: 24px 0;
+                font-size: 18px;
+                line-height: 150%;
+                color: #000000;
+                padding: 0 24px;
+            }
+            &__description {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+                margin-top: auto;
+                align-items: center;
+                height: 50px;
+                font-size: 16px;
+                line-height: 125%;
+                transition: .3s;
+                color: #0F304F;
+                background: #E7EBEE;
+                &:hover{
+                  @media screen and (min-width: 1024px){
+                    color: #fff;
+                    background: #0F304F;
+                  }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+  .product {
+    &-wrap {
+      &-item {
+        width: calc(50% - 24px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-product + .container {
+    padding: 0;
+  }
+  .section-product {
+    margin-top: 80px;
+    .product {
+      .about__title {
+        font-size: 30px;
+        line-height: 135%;
+      }
+      &-wrap {
+        margin-left: -16px;
+        margin-right: -16px;
+        &-item {
+          width: 50%;
+          margin: 0;
+          border-radius: 0;
+          &__name {
+            font-size: 16px;
+            line-height: 125%;
+          }
+        }
+      }
+      
+    }
+  }
+}
+
+
+
+
+

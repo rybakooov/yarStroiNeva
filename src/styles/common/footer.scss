@@ -1,0 +1,104 @@
+.footer {
+    margin-top: 160px;
+    border-top: 1px solid #E9E9E9;
+    padding-bottom: 40px;
+    &-wrap {
+        align-items: center;
+        padding: 40px 0; 
+        font-size: 16px;
+        line-height: 125%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &-bottom {
+        border-top: 1px solid #E9E9E9;
+        padding-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        line-height: 125%;
+        color: #979797;
+        .footer__politicy {
+            color: #979797;
+            transition: .3s;
+            &:hover{
+                @media screen and (min-width: 1024px){
+                    color: #000;
+                }
+            }
+         }
+    }
+}
+
+.footer-wrap .header-nav {
+    margin-right: auto;
+}
+@media screen and (max-width:1024px) {
+    .footer {
+        margin-top: 120px;
+        padding-bottom: 24px;
+        &-wrap {
+            padding: 24px 0;
+            font-size: 14px;
+        }
+        &-bottom {
+            .footer__politicy {
+                margin-right: 0;
+            }
+        }
+    }
+}
+.footer .header-contacts__adress {
+    display: inline;
+    margin-left: 24px;
+    margin-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        margin-top: 80px;
+        &-wrap {
+            padding: 40px 0;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            .header-logo {
+                margin-right: 0;
+            }
+            .header-nav {
+                margin: 40px 0;
+                display: flex;
+                flex-direction: column;
+                &__link {
+                    color: #505050;
+                    margin-left: 0;
+                    &:not(:last-child) {
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+            .header-contacts {
+                flex-direction: column;
+                align-items: start;
+                &__adress {
+                    margin-left: 0;
+                    margin-top: 24px;
+                    font-size: 16px;
+                }
+                &__phone {
+                    margin-left: 0;
+                    font-size: 16px;
+                }
+            }
+        }
+        &-bottom {
+            flex-direction: column;
+            align-items: start;
+            font-size: 16px;
+            .footer__copyright {
+                margin-bottom: 24px;
+            }
+        }
+    }
+}

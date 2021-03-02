@@ -1,0 +1,138 @@
+.contacts {
+  margin-bottom: -160px;
+  padding-bottom: 160px;
+  &-tabs{
+    position: absolute;
+    top: 10px;
+    left: calc(50% + 200px);
+    display: flex;
+    height: 30px;
+    border: 1px solid #0F304F;
+    overflow: hidden;
+    border-radius: 50px;
+    background-color: #fff;
+    z-index: 4;
+    &_switch{
+      & + .contacts__map{
+        iframe{
+          &:nth-child(1){
+            display: none;
+          }
+          &:nth-child(2){
+            display: block !important;
+          }
+        }
+      }
+    }
+    &__tab{
+      font-size: 16px;
+      line-height: 125%;
+      transition: .3s;
+      padding: 4px 16px;
+      color: #0F304F;
+      cursor: pointer;
+      &_active{
+        background-color: #0F304F;
+        color: #FFFFFF;
+      }
+    }
+  }
+  &-outer{
+    position: relative;
+  }
+  &-info {
+    max-width: calc(50% + 100px);
+    width: 100%;
+    &__title {
+      padding-top: 40px;
+      margin-bottom: 80px;
+      font-size: 40px;
+      line-height: 135%;
+      color: #21272C;
+    }
+    &-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      &-item {
+        width: 50%;
+        border-bottom: 1px solid #E9E9E9;
+        margin-bottom: 24px;
+        &__name {
+          font-size: 16px;
+          line-height: 125%;
+          color: #9F9F9F;
+        }
+        &__value {
+          font-size: 16px;
+          line-height: 125%;
+          color: #0D0D0D;
+          padding: 12px 0 24px;
+        }
+      }
+    }
+    .contacts-geo {
+      &__name {
+        font-size: 16px;
+        line-height: 125%;
+        color: #9F9F9F;
+      }
+      &__value {
+        font-size: 16px;
+        line-height: 125%;
+        color: #0D0D0D;
+        &:not(:last-child) {
+          padding: 12px 0;
+        }
+      }
+    }
+  }
+  &__map{
+    position: absolute;
+    left: calc(50% + 150px);
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .contacts {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    &-tabs{
+      left: 50px;
+    }
+    &-info{
+      max-width: none;
+      &__title{
+        font-size: 24px;
+        line-height: 135%;
+        margin-bottom: 40px;
+        padding-top: 40px;
+      }
+    }
+    &__map{
+      position: static;
+      height: 490px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .contacts {
+    &-tabs{
+      &__tab{
+        padding: 4px 8px;
+      }
+    }
+    &__map {
+      height: 320px;
+    }
+    &-info{
+      &-wrap{
+        &-item{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
